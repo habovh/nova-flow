@@ -5,6 +5,7 @@
     "description": "Flow typing support for Nova.",
     "version": "0.1",
     "repository": "https://github.com/habovh/nova-flow",
+    "license": "MIT",
     "bugs": "https://github.com/habovh/nova-flow/issues",
     "categories": ["languages", "issues", "completions"],
     
