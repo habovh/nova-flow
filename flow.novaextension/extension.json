@@ -1,0 +1,52 @@
+{
+    "identifier": "io.becker.Flow",
+    "name": "Flow",
+    "organization": "Jordan Becker",
+    "description": "Flow typing support for Nova.",
+    "version": "0.1",
+    "repository": "https://github.com/habovh/nova-flow",
+    "bugs": "https://github.com/habovh/nova-flow/issues",
+    "categories": ["languages", "issues", "completions"],
+    
+    "main": "main.js",
+    
+    "activationEvents": [
+        "onWorkspaceContains:flowconfig.json"
+    ],
+    
+    "entitlements": {
+        "process": true,
+        "filesystem": "readonly"
+    },
+    
+    "commands": {
+        "extensions": [
+            {
+                "title": "Preferences",
+                "command": "io.becker.Flow.openWorkspaceConfig"
+            },
+            {
+                "title": "Restart Server",
+                "command": "io.becker.Flow.reload"  
+            }
+        ]
+    },
+    
+    "config": [
+        {
+            "key": "io.becker.Flow.language-server-path",
+            "title": "Flow executable path",
+            "type": "path",
+            "placeholder": "/usr/local/bin/example"
+        }
+    ],
+    
+    "config-workspace": [
+        {
+            "key": "io.becker.Flow.language-server-path",
+            "title": "Flow executable path",
+            "type": "path",
+            "placeholder": "node_modules/.bin/flow"
+        }
+    ]
+}
