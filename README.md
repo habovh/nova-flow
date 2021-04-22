@@ -12,5 +12,5 @@ PRs welcome!
 ## Features
 
 - [x] Typing errors reporting
-- [ ] Completion
-- [ ] Hover info
+- [x] Completion
+- [x] Hover info
