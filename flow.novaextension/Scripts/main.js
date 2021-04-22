@@ -65,7 +65,7 @@ class FlowLanguageServer {
         };
         var clientOptions = {
             // The set of document syntaxes for which the server is valid
-            syntaxes: ['javascript']
+            syntaxes: ['javascript', 'jsx']
         };
         var client = new LanguageClient('io.becker.Flow', 'Flow Language Server', serverOptions, clientOptions);
         
