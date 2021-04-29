@@ -12,7 +12,8 @@
     "main": "main.js",
     
     "activationEvents": [
-        "onWorkspaceContains:flowconfig.json"
+        "onWorkspaceContains:flowconfig.json",
+        "onWorkspaceContains:.flowconfig"
     ],
     
     "entitlements": {
