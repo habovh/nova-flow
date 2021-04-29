@@ -1,3 +1,7 @@
+## Version 0.3.1
+
+Added screenshots in description
+
 ## Version 0.3
 
 Fix not activating automatically with standard `.flowconfig` files

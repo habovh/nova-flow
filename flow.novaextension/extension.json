@@ -3,7 +3,7 @@
     "name": "Flow",
     "organization": "Jordan Becker",
     "description": "Flow typing support for Nova.",
-    "version": "0.3",
+    "version": "0.3.1",
     "repository": "https://github.com/habovh/nova-flow",
     "license": "MIT",
     "bugs": "https://github.com/habovh/nova-flow/issues",
