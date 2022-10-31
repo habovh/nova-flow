@@ -7,7 +7,7 @@
     "repository": "https://github.com/habovh/nova-flow",
     "license": "MIT",
     "bugs": "https://github.com/habovh/nova-flow/issues",
-    "categories": ["languages", "issues", "completions"],
+    "categories": ["languages", "issues", "completions", "sidebars"],
     
     "main": "main.js",
     
@@ -49,6 +49,29 @@
             "title": "Flow executable path",
             "type": "path",
             "placeholder": "node_modules/.bin/flow"
+        }
+    ],
+    
+    "sidebars": [
+        {
+            "id": "io.becker.Flow.sidebar",
+            "name": "Flow",
+            "smallImage": "SidebarSmall",
+            "largeImage": "SidebarLarge",
+            "sections": [
+                {
+                    "id": "io.becker.Flow.sidebar.info",
+                    "name": "Information",
+                    "placeholderText": "Flow extension information",
+                    "headerCommands": [
+                        {
+                            "title": "Restart server",
+                            "image": "__builtin.refresh",
+                            "command": "io.becker.Flow.reload"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

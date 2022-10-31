@@ -1,5 +1,7 @@
+const InformationView = require('./informationView.js')
 
 var langserver = null;
+let compositeDisposable = new CompositeDisposable();
 
 exports.activate = function() {
     // Do work when the extension is activated
@@ -27,7 +29,12 @@ nova.commands.register(
 );
 
 class FlowLanguageServer {
+    informationView = null;
+
     constructor() {
+        this.informationView = new InformationView();
+        compositeDisposable.add(this.informationView);
+
         // Observe the configuration setting for the server's location, and restart the server on change
         nova.config.observe('io.becker.Flow.language-server-path', function(path) {
             this.start(path);
@@ -46,10 +53,12 @@ class FlowLanguageServer {
     start(path) {
         if (this.languageClient) {
             console.log('reloading...')
+            this.informationView.status = "Reloading...";
             this.languageClient.stop();
             nova.subscriptions.remove(this.languageClient);
         } else {
             console.log('activating...')
+            this.informationView.status = "Activating...";
         }
         
         // Use the default server path
@@ -76,6 +85,7 @@ class FlowLanguageServer {
             // Add the client to the subscriptions to be cleaned up
             nova.subscriptions.add(client);
             this.languageClient = client;
+            this.informationView.status = "Active";
             console.log('activated')
         }
         catch (err) {
@@ -92,6 +102,7 @@ class FlowLanguageServer {
             this.languageClient.stop();
             nova.subscriptions.remove(this.languageClient);
             this.languageClient = null;
+            this.informationView.status = "Stopped";
         }
     }
 }
