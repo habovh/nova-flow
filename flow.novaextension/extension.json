@@ -30,6 +30,10 @@
             {
                 "title": "Restart Server",
                 "command": "io.becker.Flow.reload"  
+            },
+            {
+                "title": "Stop Server",
+                "command": "io.becker.Flow.stop"  
             }
         ]
     },

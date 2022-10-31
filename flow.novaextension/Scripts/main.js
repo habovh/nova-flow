@@ -20,7 +20,12 @@ const reload = function() {
     langserver.restart()
 };
 
+const stop = function() {
+    langserver.stop()
+};
+
 nova.commands.register("io.becker.Flow.reload", reload);
+nova.commands.register("io.becker.Flow.stop", stop);
 nova.commands.register(
     "io.becker.Flow.openWorkspaceConfig",
     () => {
