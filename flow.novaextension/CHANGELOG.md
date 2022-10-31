@@ -1,3 +1,8 @@
+## Version 0.4
+
+- Add sidebar to display basic language server status
+- Add "Stop server" command in extension menu
+
 ## Version 0.3.1
 
 Added screenshots in description
